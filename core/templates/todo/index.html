@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <style>
+        *{
+            background-color: cornsilk;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>ToDo</h1>
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+    {% for tasks in task %}
+    <p>
+        {% if tasks.done %}
+            <del>{{tasks.title}}</del>
+        {% else %}
+            {{tasks.title}}
+        {% endif %}
+        <a href="/tasks/{{tasks.id}}/update/">Edit</a>
+        <a href="/tasks/{{tasks.id}}/delete">Delete</a>
+    </p>
+    {% endfor %}
+</body>
+</html>
