@@ -41,7 +41,7 @@ class TaskDelete(LoginRequiredMixin,DeleteView):
 def sign_up(request):
     if request.method == 'GET':
         form = RegisterForm()
-        return render(request, 'registeration/register.html', { 'form': form})
+        return render(request, 'registration/register.html', { 'form': form})
     if request.method == 'POST':
         form = RegisterForm(request.POST) 
         if form.is_valid():
@@ -52,4 +52,4 @@ def sign_up(request):
             login(request, user)
             return redirect('/task')
         else:
-            return render(request, 'registeration/register.html', {'form': form})
+            return render(request, 'registration/register.html', {'form': form})
