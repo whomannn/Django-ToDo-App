@@ -30,4 +30,6 @@ urlpatterns = [
     path('accounts/profile/',RedirectView.as_view(url = '/tasks')),
     path('task/',RedirectView.as_view(url = '/tasks')),
     path("register/", views.sign_up, name="register"),
+    path("tasks/api/v1/",include('todo.api.v1.urls')),
+    path('api-auth/', include('rest_framework.urls'))
 ]
