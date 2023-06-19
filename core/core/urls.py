@@ -22,7 +22,7 @@ from todo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/',include('django.contrib.auth.urls')),
+    path('accounts/',include('accounts.urls')),
     path('tasks/',TaskCreate.as_view(),name='task-create'),
     path('tasks/<int:pk>/update/',TaskUpdate.as_view(),name='task-update'),
     path('tasks/<int:pk>/delete',TaskDelete.as_view(), name="task-delete"),
