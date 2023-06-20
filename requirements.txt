@@ -2,10 +2,7 @@ django >3.2,<3.3
 python-decouple
 djangorestframework
 markdown       
-<<<<<<< Updated upstream
 django-filter
-=======
 django-filter
 drf-yasg[validation]
 djangorestframework_simplejwt
->>>>>>> Stashed changes
