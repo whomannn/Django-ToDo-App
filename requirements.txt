@@ -6,3 +6,5 @@ django-filter
 django-filter
 drf-yasg[validation]
 djangorestframework_simplejwt
+pytest
+pytest-django
