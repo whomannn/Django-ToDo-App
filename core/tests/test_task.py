@@ -10,7 +10,7 @@ class TestTaskApi:
         response = client.get('http://127.0.0.1:8000/tasks/api/v1/task/')
         assert response.status_code == 200
     def test_create_task_response_401(self):
-        user = User.objects.create_user(username='testjkbjk',email="test@test.com",password="a/@1234567")
+        user = User.objects.create_user(email='test2@gmail.com',username="test2",password="test@1234567")
         client = APIClient()
         data = {
             'author' : user,
