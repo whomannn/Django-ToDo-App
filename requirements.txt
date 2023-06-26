@@ -1,3 +1,5 @@
 django >3.2,<3.3
 python-decouple
 flake8
+pytest
+pytest-django
