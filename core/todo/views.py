@@ -1,20 +1,14 @@
 from django.contrib.auth import login
 from django.contrib import messages
-from typing import Any, Dict
-from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
+from typing import Any
 from django.shortcuts import redirect, render
-from django.urls import reverse_lazy
 from .models import Task
 from django.views.generic import (
-    ListView,
-    DetailView,
-    FormView,
     CreateView,
     UpdateView,
     DeleteView,
 )
 from .forms import TaskForm
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import RegisterForm
 
