@@ -14,12 +14,7 @@ class TestTaskApi:
         client = APIClient()
         response = client.get('http://127.0.0.1:8000/tasks/api/v1/task/')
         assert response.status_code == 200
-<<<<<<< Updated upstream
-    def test_create_task_response_401(self):
-        user = User.objects.create_user(username='testjkbjk',email="test@test.com",password="a/@1234567")
-=======
     def test_create_task_response_201(self,common_user): 
->>>>>>> Stashed changes
         client = APIClient()
         data = {
             'title' : 'test',
