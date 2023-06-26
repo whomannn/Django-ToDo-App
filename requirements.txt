@@ -1,13 +1,12 @@
 django >3.2,<3.3
 python-decouple
-<<<<<<< Updated upstream
 djangorestframework
 markdown       
 django-filter
 django-filter
 drf-yasg[validation]
 djangorestframework_simplejwt
-=======
->>>>>>> Stashed changes
 pytest
 pytest-django
+flake8
+black
