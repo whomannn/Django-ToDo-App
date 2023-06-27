@@ -19,4 +19,4 @@ jobs:
     - name: install flake8
       run: docker-compose exec -T backend sh -c "pip install flake8"
     - name: Run Test
-      run: docker-compose exec -T backend sh -c "black && flake8 && pytest ."
+      run: docker-compose exec -T backend sh -c "flake8 && pytest ."
