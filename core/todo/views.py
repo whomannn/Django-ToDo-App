@@ -1,6 +1,7 @@
 from django.contrib.auth import login
 from django.contrib import messages
 from typing import Any
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from .models import Task
 from django.views.generic import (
@@ -11,6 +12,8 @@ from django.views.generic import (
 from .forms import TaskForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import RegisterForm
+from .task import ClearTask
+import time
 
 # Create your views here.
 
@@ -63,3 +66,9 @@ def sign_up(request):
             return redirect("/task")
         else:
             return render(request, "registration/register.html", {"form": form})
+
+
+
+def Clear_Task(request):
+    ClearTask().delay(600)
+    return HttpResponse('Tasks deleted')
