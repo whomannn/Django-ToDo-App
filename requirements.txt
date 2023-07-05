@@ -8,4 +8,7 @@ drf-yasg[validation]
 djangorestframework_simplejwt
 pytest
 pytest-django
-faker
+flake8
+black
+celery
+redis
