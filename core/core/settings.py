@@ -142,3 +142,10 @@ REST_FRAMEWORK = {
 }
 
 CELERY_BROKER_URL = 'redis://redis:6379/1'
+
+CELERY_BEAT_SCHEDULE = {
+    'clear_task' :{
+        'task': 'todo.task.ClearTask',
+        'schedule' : 600
+    }
+}
