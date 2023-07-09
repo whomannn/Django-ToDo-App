@@ -12,4 +12,6 @@ flake8
 black
 celery
 redis
+requests
 django-redis
+gunicorn
