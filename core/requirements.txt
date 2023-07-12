@@ -1,0 +1,17 @@
+django >3.2,<3.3
+python-decouple
+djangorestframework
+markdown       
+django-filter
+django-filter
+drf-yasg[validation]
+djangorestframework_simplejwt
+pytest
+pytest-django
+flake8
+black
+celery
+redis
+requests
+django-redis
+gunicorn
