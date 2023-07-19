@@ -16,7 +16,9 @@ jobs:
     - name: test output
       run: true
   Deploy:
+    if: ${{ always() && contains(join(needs.*.result, ','), 'success')}}
     name: Deploy
+    needs: Test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
