@@ -23,8 +23,8 @@ jobs:
     - name: Connect and Execute commands
       uses: aplleboy/ssh-action@master
       with:
-        username: {{secrets.USERNAME}}
-        password: {{secrets.PASSWORD}}
-        host: {{secrets.HOST}}
-        port: {{secrets.PORT}}
+        username: ${{secrets.USERNAME}}
+        password: ${{secrets.PASSWORD}}
+        host: ${{secrets.HOST}}
+        port: ${{secrets.PORT}}
         script: ls
